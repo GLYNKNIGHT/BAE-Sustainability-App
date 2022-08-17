@@ -1,19 +1,26 @@
+/* lours - A black (#3C3744), green (#20891A) and a white (#F7F0F0). */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 body {
-  background-image: linear-gradient(120deg, #F7F0F0 0%, #20891A 100%);
+  /* background-image: linear-gradient(120deg, #F7F0F0 0%, #20891A 100%); */
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
-header {
+
+.App{
+  width: 390px;
+}
+
+/* header {
   font-size: 2rem;
 }
 
-header,
+header, */
 form {
   min-height: 20vh;
   display: flex;
@@ -37,6 +44,19 @@ form button:hover {
   color: #7D84B2;
   background: #f7fffe;
   
+}
+
+#overall-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 77px;
+  /* max-width: 390px; */
+  background-color: #20891A;
+}
+
+#companyinfo{
+  display: flex;
 }
 
 .todosection{

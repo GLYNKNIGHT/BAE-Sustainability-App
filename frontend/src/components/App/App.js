@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from "react";
 import "./App.css";
 
+import AppHeader from "../Header/header";
 import Input from "./../Input"
 import Todolist from "../List/todolist";
 import Navbar from "../Navbar/navbar";
@@ -55,11 +56,8 @@ function App() {
   
   return (
     <div className="App">
-      <Navbar />
-      <header>
-      <h1> CARBON BUSTERS </h1>
-      </header>
-      <Todolist 
+      <AppHeader />
+       <Todolist 
         filteredTodos={filteredTodos} 
         setTodos={setTodos} 
         todos={todos} />     
@@ -76,6 +74,7 @@ function App() {
         setUserInput={setUserInput}
         setStatus={setStatus}
         />
+        <Navbar />
     </div>
   );
 }
