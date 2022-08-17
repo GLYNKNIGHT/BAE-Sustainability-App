@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from '../Card/card';
+import {tasks} from '../../lib.js'
 
-function Todolist ({todos, setTodos, filteredTodos}){
+function Todolist ({myScore, setMyScore}){
 
     return(
         <div className="todosection">
@@ -10,14 +11,14 @@ function Todolist ({todos, setTodos, filteredTodos}){
                 <div className="card-container">         
                     
                     <div className='left-cards'>
-                    <Card/>
-                    <Card/> 
-                    <Card/>
+                        <Card myScore={myScore} setMyScore={setMyScore} title={tasks[0].title} value={tasks[0].score}/>
+                        <Card myScore={myScore} setMyScore={setMyScore} title={tasks[1].title} value={tasks[1].score}/>
+                        <Card myScore={myScore} setMyScore={setMyScore} title={tasks[2].title} value={tasks[2].score}/>
                     </div>
                     <div className='right-cards'>
-                    <Card/>
-                    <Card/> 
-                    <Card/>
+                        <Card myScore={myScore} setMyScore={setMyScore} title={tasks[3].title} value={tasks[3].score}/>
+                        <Card myScore={myScore} setMyScore={setMyScore} title={tasks[4].title} value={tasks[4].score}/>
+                        <Card myScore={myScore} setMyScore={setMyScore} title={tasks[5].title} value={tasks[5].score}/>
                     </div>
                    
                 </div>
@@ -26,13 +27,3 @@ function Todolist ({todos, setTodos, filteredTodos}){
 }
 
 export default Todolist
-
-/*{filteredTodos.map(todo => (
-    <Item 
-        text={todo.text} 
-        key={todo.id} 
-        todos={todos}
-        setTodos={setTodos}
-        todo={todo}
-        />
-))}*/

@@ -3,11 +3,9 @@
 * {
   margin: 0;
   padding: 0;
- 
-  /* box-sizing: border-box; */
+
 }
 body {
-  /* background-image: linear-gradient(120deg, #F7F0F0 0%, #20891A 100%); */
   
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -17,35 +15,6 @@ body {
   width: 390px;
 }
 
-/* header {
-  font-size: 2rem;
-}
-
-header, */
-form {
-  min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-form input,
-form button {
-  padding: 0.5rem;
-  font-size: 2rem;
-  border: none;
-  background: white;
-}
-form button {
-  background: #7D84B2;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-form button:hover {
-  color: #7D84B2;
-  background: #f7fffe;
-  
-}
 
 #overall-header{
   display: flex;
@@ -58,6 +27,17 @@ form button:hover {
   background-color: #20891A;
 }
 
+#nav-bar{
+  background-color: #20891A;
+  display: flex;
+  color:  #F7F0F0;
+}
+
+#lower-logo{
+  display: flex;
+}
+
+
 #companyinfo{
   display: flex;
 }
@@ -66,12 +46,10 @@ form button:hover {
   width: 100%;
   margin: 5px;
   height: 20vw;
+  font-size: 0.8rem;
+  padding: 5px;
 }
 
-/* .todosection{
-  text-align: center;
-  height: 50vh;
-} */
 
 .card-container {
 display: flex;
@@ -79,7 +57,6 @@ flex-wrap: wrap;
 
 flex-direction: row;
 justify-content: space-evenly;
- background-color: palevioletred;
   align-items: center;
   margin: 1rem;
   
@@ -91,7 +68,7 @@ display: flex;
 flex-direction: column;
 }
 
-.todo-list {
+/* .todo-list {
   min-width: 30%;
   list-style: none;
   
@@ -112,7 +89,7 @@ flex-direction: column;
 }
 .todo li {
   flex: 1;
-}
+} */
 
 /* NAVBAR */
 #nav-bar{
@@ -135,33 +112,16 @@ flex-direction: column;
 }
 
 
-.trash-btn,
-.complete-btn {
-  background: #FFBF00;
-  color: white;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
-.complete-btn {
-  background: #19297C;
-}
-.todo-item {
-  padding: 0rem 0.5rem;
-}
-
 .lucky{
   width: 100vw;
   height: 20vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-bottom-style: solid;
-  border-bottom-width: 5px;
+  
 }
 
 .luckybutton{
+  height: 50%;
   background: #FFBF00;
   color: white;
   border: none;
@@ -170,20 +130,10 @@ flex-direction: column;
   font-size: 1rem;
 }
 
-.fa-trash,
-.fa-check {
-  pointer-events: none;
+#minusButton{
+  width: 30px;
 }
 
-.fall {
-  transform: translateY(10rem) rotateZ(20deg);
-  opacity: 0;
-}
-
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
 
 /*CUSTOM SELECTOR */
 select {

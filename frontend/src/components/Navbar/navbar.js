@@ -1,12 +1,21 @@
 import React from 'react'
+import Footprint from './footprint.png'
 
 function Navbar () {
     return(
-        <nav id="nav-bar">
-            <a href="google.com"className="nav-links">Scores</a>
-            <a href="google.com"className="nav-links">Profile</a>
-            <a href="google.com"className="nav-links">Details</a>
-        </nav>
+        <>
+        <div id="nav-bar">
+        <div id="lower-logo">
+                <p>Carbon Crushers</p>
+                <img src={Footprint} height="20px"/>
+            
+                </div>
+        <nav id="navlinks">
+            <a href="google.com"className="nav-links">About</a>
+            <a href="google.com"className="nav-links">Contact us</a>
+            </nav>
+        </div>
+        </>
          )
         }
         

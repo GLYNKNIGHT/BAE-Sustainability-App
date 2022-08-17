@@ -3,15 +3,17 @@ import {useState} from "react";
 
 import '../App/App.css'
 
-function LuckyButton( {luckyAction, setLuckyAction} ){
+function LuckyButton( {teamScore, setTeamScore, myScore, setMyScore} ){
+    let newPersonalScore = 10000-Number(myScore)
 
     function handleClick () {
-        setLuckyAction("poop")
+        let newTeamScore = Number(teamScore) - Number(newPersonalScore) - 175
+        setTeamScore(newTeamScore)
     }
     
       return(
         <div className="lucky">
-            <button className="luckybutton" onClick={handleClick}>See your stats</button>
+            <button className="luckybutton" onClick={handleClick}>Refresh team stats</button>
         </div>
     )
 }

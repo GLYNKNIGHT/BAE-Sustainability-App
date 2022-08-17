@@ -1,80 +1,32 @@
-import React,{useState, useEffect} from "react";
+import React,{useState} from "react";
 import "./App.css";
-import Card from "../Card/card";
 import AppHeader from "../Header/header";
-import Input from "./../Input"
 import Todolist from "../List/todolist";
 import Navbar from "../Navbar/navbar";
 import LuckyButton from "../LuckyButton";
 
 function App() {
+  const [myScore, setMyScore] = useState(10000)
+  const [teamScore, setTeamScore] = useState(50000)
 
-  const [userInput, setUserInput] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState("All"); 
-  const [filteredTodos, setFilteredTodos] = useState([]);
-
-  const [luckyAction, setLuckyAction] = useState("");
-  
-  useEffect(() => {
-    getLocalTodos();
-  }, [])
-
-  useEffect(() => {
-    filterHandler();
-    saveLocalTodos();
-  }, [todos, status])
-
-  const filterHandler = () => {
-    switch(status){
-      case 'completed':
-        setFilteredTodos(todos.filter(todo => todo.completed === true));
-        break;
-      case 'uncompleted':
-        setFilteredTodos(todos.filter(todo => todo.completed === false));
-        break;
-      default:
-        setFilteredTodos(todos);
-        break;
-    }
-  }
-
-  const saveLocalTodos = () => {
-      localStorage.setItem('todos', JSON.stringify(todos));
-  };
-
-  const getLocalTodos = () => {
-    if(localStorage.getItem('todos') === null){
-      localStorage.setItem('todos', JSON.stringify([]));
-    }
-    else{
-      let todoLocal = JSON.parse(localStorage.getItem('todos', JSON.stringify(todos)));
-      setTodos(todoLocal)
-      console.log(todoLocal)
-    }
-  }
   
   return (
     <div className="App">
-      <AppHeader />
-    
+      <AppHeader 
+        teamScore={teamScore}
+        setTeamScore={setTeamScore}
+        myScore={myScore} 
+        setMyScore={setMyScore} />
        <Todolist 
-        filteredTodos={filteredTodos} 
-        setTodos={setTodos} 
-        todos={todos} />     
-      <p>{luckyAction}</p> 
+        myScore={myScore}
+        setMyScore={setMyScore}
+         />     
       <LuckyButton 
-        luckyAction={luckyAction}
-        setLuckyAction={setLuckyAction}
+        teamScore={teamScore}
+        setTeamScore={setTeamScore}
+        myScore={myScore}
+        setMyScore={setMyScore}
       />
-      <h2>Add a challenge to the list!</h2>
-      <Input 
-        userInput={userInput} 
-        todos={todos} 
-        setTodos={setTodos} 
-        setUserInput={setUserInput}
-        setStatus={setStatus}
-        />
         <Navbar />
     </div>
   );
