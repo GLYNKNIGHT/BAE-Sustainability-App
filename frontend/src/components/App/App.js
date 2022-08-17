@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from "react";
 import "./App.css";
-
+import Card from "../Card/card";
 import AppHeader from "../Header/header";
 import Input from "./../Input"
 import Todolist from "../List/todolist";
@@ -57,6 +57,7 @@ function App() {
   return (
     <div className="App">
       <AppHeader />
+    
        <Todolist 
         filteredTodos={filteredTodos} 
         setTodos={setTodos} 

@@ -3,11 +3,12 @@
 * {
   margin: 0;
   padding: 0;
+ 
   /* box-sizing: border-box; */
 }
 body {
   /* background-image: linear-gradient(120deg, #F7F0F0 0%, #20891A 100%); */
-  color: white;
+  
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
@@ -51,6 +52,8 @@ form button:hover {
   justify-content: space-between;
   padding: 1rem;
   height: 77px;
+  font-size: 1rem;
+  color: white;
   /* max-width: 390px; */
   background-color: #20891A;
 }
@@ -58,18 +61,34 @@ form button:hover {
 #companyinfo{
   display: flex;
 }
-
-.todosection{
-  text-align: center;
-  height: 50vh;
+.card{
+  background-color: #F7F0F0;
+  width: 100%;
+  margin: 5px;
+  height: 20vw;
 }
 
-.todo-container {
-  display: flex;
-  justify-content: center;
+/* .todosection{
+  text-align: center;
+  height: 50vh;
+} */
+
+.card-container {
+display: flex;
+flex-wrap: wrap;
+
+flex-direction: row;
+justify-content: space-evenly;
+ background-color: palevioletred;
   align-items: center;
-  margin-top: 2rem;
+  margin: 1rem;
   
+}
+
+.right-cards
+.left-cards{
+display: flex;
+flex-direction: column;
 }
 
 .todo-list {
