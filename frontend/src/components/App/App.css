@@ -41,6 +41,7 @@ form button:hover {
 
 .todosection{
   text-align: center;
+  height: 50vh;
 }
 
 .todo-container {
@@ -48,11 +49,13 @@ form button:hover {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  
 }
 
 .todo-list {
   min-width: 30%;
   list-style: none;
+  
 }
 
 .todo {
@@ -71,6 +74,27 @@ form button:hover {
 .todo li {
   flex: 1;
 }
+
+/* NAVBAR */
+#nav-bar{
+  margin-top: 2em;
+  margin-right: 5vw;
+  text-align: right;
+  height: 10vh;
+  font-size: 120%;
+}
+
+.nav-links{
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 2em;
+}
+
+.nav-links:hover{
+  color: var(--logo-green);
+  text-decoration: underline;
+}
+
 
 .trash-btn,
 .complete-btn {

@@ -3,6 +3,7 @@ import "./App.css";
 
 import Input from "./../Input"
 import Todolist from "../List/todolist";
+import Navbar from "../Navbar/navbar";
 import LuckyButton from "../LuckyButton";
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
   
   return (
     <div className="App">
+      <Navbar />
       <header>
       <h1> CARBON BUSTERS </h1>
       </header>
